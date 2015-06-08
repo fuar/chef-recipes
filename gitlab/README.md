@@ -1,17 +1,14 @@
 gitlab Cookbook
 ===============
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Install omnibus gitlab with some kludges.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
-#### packages
-- `toaster` - gitlab needs toaster to brown your bagel.
+RHEL > 6 (probably 5).
+chef
+
 
 Attributes
 ----------
@@ -27,17 +24,58 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['gitlab']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['gitlab']['postgresql']['host']</tt></td>
+    <td>String</td>
+    <td>host for database</td>
+    <td><tt>'127.0.0.1'</tt></td>
+  </tr>
+    <tr>
+    <th>['gitlab']['postgresql']['port']</th>
+    <th>String</th>
+    <th>postgres port</th>
+    <th>'5432'</th>
+  </tr>
+    <tr>
+    <th>['gitlab']['postgresql']['username']</th>
+    <th>String</th>
+    <th>postgres username</th>
+    <th>'postgres'</th>
+  </tr>
+    <tr>
+    <th>['gitlab']['postgresql']['gitlab_database']</th>
+    <th>String</th>
+    <th>database for gitlab</th>
+    <th>'gitlab'</th>
+  </tr>
+    <tr>
+    <th>['gitlab']['postgresql']['gitlab_username']</th>
+    <th>String</th>
+    <th>username for gitlab database</th>
+    <th>'gitlab'</th>
+  </tr>
+    <tr>
+    <th>['gitlab']['postgresql']['gitlab_password']</th>
+    <th>String</th>
+    <th>password for gitlab database</th>
+    <th>It's kinda stupid, set value of default password, dont't you think?</th>
+  </tr>
+    <tr>
+    <th>['gitlab']['nginx']['url']</th>
+    <th>String</th>
+    <th>gitlab URL</th>
+    <th>'https://gitlab.example.com'</th>
+  </tr>
+    <tr>
+    <th>['gitlab']['nginx']['embedded']</th>
+    <th>Boolean</th>
+    <th>Enable or disable embedded nginx. Things may be work wrong, if enabling.</th>
+    <th>'false'</th>
   </tr>
 </table>
 
 Usage
 -----
 #### gitlab::default
-TODO: Write usage instructions for each cookbook.
 
 e.g.
 Just include `gitlab` in your node's `run_list`:
@@ -65,4 +103,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: fuar
