@@ -7,6 +7,7 @@ Requirements
 ------------
 
 RHEL > 6 (probably 5).
+
 chef
 
 
