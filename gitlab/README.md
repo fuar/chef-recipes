@@ -13,10 +13,6 @@ chef
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
-#### gitlab::default
 <table>
   <tr>
     <th>Key</th>
