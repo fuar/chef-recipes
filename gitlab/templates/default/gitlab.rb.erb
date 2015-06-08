@@ -1,0 +1,13 @@
+external_url '<%= node['gitlab']['nginx']['url'] %>'
+nginx['enable'] = <%= node['gitlab']['nginx']['embedded'] %>
+ci_nginx['enable'] = <%= node['gitlab']['nginx']['embedded'] %>
+
+postgresql['enable'] = false
+
+gitlab_rails['db_adapter'] = 'postgresql'
+gitlab_rails['db_encoding'] = 'unicode'
+gitlab_rails['db_database'] = '<%= node['gitlab']['postgresql']['gitlab_database'] %>'
+gitlab_rails['db_host'] = '<%= node['gitlab']['postgresql']['host'] %>'
+gitlab_rails['db_port'] = '<%= node['gitlab']['postgresql']['port'] %>'
+gitlab_rails['db_username'] = '<%= node['gitlab']['postgresql']['gitlab_username'] %>'
+gitlab_rails['db_password'] = '<%= node['gitlab']['postgresql']['gitlab_password'] %>'

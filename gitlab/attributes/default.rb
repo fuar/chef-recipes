@@ -1,0 +1,8 @@
+default['gitlab']['postgresql']['host'] = '127.0.0.1'
+default['gitlab']['postgresql']['port'] = '5432'
+default['gitlab']['postgresql']['username'] = 'postgres'
+default['gitlab']['postgresql']['gitlab_database'] = 'gitlab'
+default['gitlab']['postgresql']['gitlab_username'] = 'gitlab'
+default['gitlab']['postgresql']['gitlab_password'] = 'KtHlaaQmnxE8g'
+default['gitlab']['nginx']['url'] = 'https://gitlab.example.com'
+default['gitlab']['nginx']['embedded'] = 'false'
